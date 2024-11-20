@@ -1,0 +1,122 @@
+1:  #include <iostream>
+using namespace stdж
+int main() {
+    double R1, R2, R3, R0;
+    cout << "Введите значение R1: ";
+    cin >> R1; 
+    cout << "Введите значение R2: ";
+    cin >> R2; 
+    cout << "Введите значение R3: ";
+    cin >> R3;
+    if (R1 == 0 || R2 == 0 || R3 == 0) {
+        cout << "Ошибка: Сопротивление не может быть равно нулю." << endl;
+        return 1; 
+    }
+    double inverseR1 = 1 / R1; // Обратное значение R1
+    double inverseR2 = 1 / R2; // Обратное значение R2
+    double inverseR3 = 1 / R3; // Обратное значение R3
+    double sumInverse = inverseR1 + inverseR2 + inverseR3;
+    R0 = 1 / sumInverse;
+    cout << "Значение сопротивления R0: " << R0 << endl;
+    return 0;
+}
+2: #include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+    double circumference; 
+    double radius;
+    double area;
+    cout << "Введите длину окружности: ";
+    cin >> circumference;
+    radius = circumference / (2 * M_PI);
+    area = M_PI * radius * radius;
+    cout << "Площадь круга: " << area << endl;
+    return 0;
+}
+3: #include <iostream>
+
+int main() {
+    double v, t, a, S;
+    std::cout << "Введите скорость (v): ";
+    std::cin >> v;
+    std::cout << "Введите время (t): ";
+    std::cin >> t;
+    std::cout << "Введите ускорение (a): ";
+    std::cin >> a;
+    S = v * t + (a * t * t) / 2;
+    std::cout << "Пройденное расстояние (S): " << S << std::endl;
+    return 0;
+}
+4: #include <iostream>
+
+int main() {
+    int total_seconds;
+    std::cout << "Введите время в секундах: ";
+    std::cin >> total_seconds;
+
+    int hours = total_seconds / 3600;
+    int minutes = (total_seconds % 3600) / 60;
+    int seconds = total_seconds % 60;
+
+    std::cout << hours << " часов, " << minutes << " минут, " << seconds << " секунд." << std::endl;
+
+    return 0;
+}
+5: #include <iostream>
+#include <cmath>
+int main() {
+    double amount;
+    std::cout << "Введите сумму в долларах: ";
+    std::cin >> amount;
+    int dollars = static_cast<int>(amount);
+    int cents = static_cast<int>(round((amount - dollars) * 100));
+    std::cout << dollars << " долларов и " << cents << " центов." << std::endl;
+    return 0;
+}
+6:#include <iostream>
+int main() {
+    int days;
+    std::cout << "Введите количество дней: ";
+    std::cin >> days;
+    int weeks = days / 7;
+    int remainingDays = days % 7;
+    std::cout << weeks << " недель и " << remainingDays << " дней." << std::endl;
+    return 0;
+}
+7: #include <iostream>
+#include <iomanip>
+int main() {
+    double distance;
+    double timeMinutes, timeSeconds;
+    std::cout << "Calculating running speed." << std::endl;
+    std::cout << "Enter the length of distance(meters) = ";
+    std::cin >> distance;
+    std::cout << "Enter time(min.sec) = ";
+    std::cin >> timeMinutes >> timeSeconds;
+    int totalTimeInSeconds = static_cast<int>(timeMinutes) * 60 + static_cast<int>(timeSeconds * 100) / 100;
+    std::cout << "Distance: " << distance << " m" << std::endl;
+    std::cout << "Time: " << static_cast<int>(timeMinutes) << " min " 
+              << static_cast<int>(timeSeconds * 100) % 100 << " sec = " 
+              << totalTimeInSeconds << " seconds" << std::endl;
+    double speed = (distance / totalTimeInSeconds) * 3.6;
+    std::cout << "You were running at speed " << std::fixed << std::setprecision(2) 
+              << speed << " km/h" << std::endl;
+    return 0;
+}
+8: #include <iostream>
+int main() {
+    double deposit;
+    double annualInterestRate;
+    std::cout << "Введите сумму вклада в евро: ";
+    std::cin >> deposit;
+    std::cout << "Введите процент годовых: ";
+    std::cin >> annualInterestRate;
+    double monthlyInterestRate = annualInterestRate / 100 / 12;
+    double monthlyPayment = deposit * monthlyInterestRate;
+    std::cout << "Сумма, выплачиваемая банком каждый месяц: " << monthlyPayment << " евро" << std::endl;
+    return 0;
+}
+
+
+
